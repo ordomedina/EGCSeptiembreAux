@@ -12,12 +12,14 @@ import domain.Respuesta;
 import repositories.RespuestaRepository;
 
 @Service
-@Transactional
 public class RespuestaService {
 
 	@Autowired
 	private RespuestaRepository respuestaRepository;
 
+	public RespuestaService(RespuestaRepository respuestaRepository) {
+		this.respuestaRepository = respuestaRepository;
+	}
 
 	public Respuesta create() {
 		final Respuesta res = new Respuesta();

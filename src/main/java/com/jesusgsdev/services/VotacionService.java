@@ -12,12 +12,14 @@ import domain.Votacion;
 import repositories.VotacionRepository;
 
 @Service
-@Transactional
 public class VotacionService {
 
 	@Autowired
 	private VotacionRepository votacionRepository;
 
+	public VotacionService(VotacionRepository votacionRepository) {
+		this.votacionRepository = votacionRepository;
+	}
 
 	public Votacion create() {
 		final Votacion res = new Votacion();
