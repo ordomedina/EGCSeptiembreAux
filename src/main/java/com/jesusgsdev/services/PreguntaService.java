@@ -1,15 +1,12 @@
 
-package services;
+package com.jesusgsdev.services;
 
-import java.util.Collection;
-
-import javax.transaction.Transactional;
-
+import com.jesusgsdev.entities.Pregunta;
+import com.jesusgsdev.repositories.PreguntaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import domain.Pregunta;
-import repositories.PreguntaRepository;
+import java.util.Collection;
 
 @Service
 public class PreguntaService {

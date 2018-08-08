@@ -1,15 +1,12 @@
 
-package services;
+package com.jesusgsdev.services;
 
-import java.util.Collection;
-
-import javax.transaction.Transactional;
-
+import com.jesusgsdev.entities.Respuesta;
+import com.jesusgsdev.repositories.RespuestaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import domain.Respuesta;
-import repositories.RespuestaRepository;
+import java.util.Collection;
 
 @Service
 public class RespuestaService {

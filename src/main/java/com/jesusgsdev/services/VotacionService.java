@@ -1,15 +1,12 @@
 
-package services;
+package com.jesusgsdev.services;
 
-import java.util.Collection;
-
-import javax.transaction.Transactional;
-
+import com.jesusgsdev.entities.Votacion;
+import com.jesusgsdev.repositories.VotacionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import domain.Votacion;
-import repositories.VotacionRepository;
+import java.util.Collection;
 
 @Service
 public class VotacionService {
