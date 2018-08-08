@@ -9,11 +9,13 @@ import org.springframework.stereotype.Service;
 import java.util.Collection;
 
 @Service
+
 public class RespuestaService {
 
-	@Autowired
+
 	private RespuestaRepository respuestaRepository;
 
+	@Autowired
 	public RespuestaService(RespuestaRepository respuestaRepository) {
 		this.respuestaRepository = respuestaRepository;
 	}

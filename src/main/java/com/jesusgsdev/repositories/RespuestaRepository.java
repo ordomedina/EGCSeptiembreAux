@@ -1,11 +1,10 @@
-package repositories;
+package com.jesusgsdev.repositories;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.jesusgsdev.entities.Respuesta;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import domain.Respuesta;
-
 @Repository
-public interface RespuestaRepository extends JpaRepository<Respuesta, Long> {
+public interface RespuestaRepository extends CrudRepository<Respuesta, Long> {
 
 }

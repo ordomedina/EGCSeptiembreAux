@@ -1,12 +1,11 @@
 
-package repositories;
+package com.jesusgsdev.repositories;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.jesusgsdev.entities.Votacion;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import domain.Votacion;
-
 @Repository
-public interface VotacionRepository extends JpaRepository<Votacion, Long> {
+public interface VotacionRepository extends CrudRepository<Votacion, Long> {
 
 }

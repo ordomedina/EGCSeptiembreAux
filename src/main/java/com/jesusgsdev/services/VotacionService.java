@@ -11,9 +11,10 @@ import java.util.Collection;
 @Service
 public class VotacionService {
 
-	@Autowired
+
 	private VotacionRepository votacionRepository;
 
+	@Autowired
 	public VotacionService(VotacionRepository votacionRepository) {
 		this.votacionRepository = votacionRepository;
 	}

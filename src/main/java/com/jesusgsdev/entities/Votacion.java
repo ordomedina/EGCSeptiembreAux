@@ -1,15 +1,15 @@
 
 package com.jesusgsdev.entities;
 
-import java.util.Collection;
-import java.util.Date;
-import java.util.Objects;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.hibernate.validator.constraints.NotBlank;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-
-import org.hibernate.validator.constraints.NotBlank;
-import org.springframework.format.annotation.DateTimeFormat;
+import java.util.Collection;
+import java.util.Date;
 
 @Entity
 @Access(AccessType.PROPERTY)
@@ -126,20 +126,32 @@ public class Votacion extends BaseEntity {
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
+
 		if (o == null || getClass() != o.getClass()) return false;
+
 		Votacion votacion = (Votacion) o;
-		return Objects.equals(id_censo, votacion.id_censo) &&
-				Objects.equals(id_grupo, votacion.id_grupo) &&
-				Objects.equals(titulo, votacion.titulo) &&
-				Objects.equals(descripcion, votacion.descripcion) &&
-				Objects.equals(fecha_ini, votacion.fecha_ini) &&
-				Objects.equals(fecha_fin, votacion.fecha_fin) &&
-				Objects.equals(clave, votacion.clave);
+
+		return new EqualsBuilder()
+				.append(id_censo, votacion.id_censo)
+				.append(id_grupo, votacion.id_grupo)
+				.append(titulo, votacion.titulo)
+				.append(descripcion, votacion.descripcion)
+				.append(fecha_ini, votacion.fecha_ini)
+				.append(fecha_fin, votacion.fecha_fin)
+				.append(clave, votacion.clave)
+				.isEquals();
 	}
 
 	@Override
 	public int hashCode() {
-
-		return Objects.hash(id_censo, id_grupo, titulo, descripcion, fecha_ini, fecha_fin, clave);
+		return new HashCodeBuilder(17, 37)
+				.append(id_censo)
+				.append(id_grupo)
+				.append(titulo)
+				.append(descripcion)
+				.append(fecha_ini)
+				.append(fecha_fin)
+				.append(clave)
+				.toHashCode();
 	}
 }
