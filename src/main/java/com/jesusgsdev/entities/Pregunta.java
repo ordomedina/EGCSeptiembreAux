@@ -26,6 +26,14 @@ public class Pregunta extends BaseEntity {
 	}
 
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	public String getTexto_pregunta() {
 		return this.texto_pregunta;
 	}

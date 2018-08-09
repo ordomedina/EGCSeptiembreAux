@@ -2,8 +2,7 @@ package com.jesusgsdev.constants;
 
 public enum ErrorCode {
 
-    BOOK_NOT_FOUND ("0001", "Book not found"),
-    BOOK_ALREADY_EXISTS ("0002", "Book already exists"),
+    PREGUNTA_NO_ENCONTRADA("0001", "Pregunta no encontrada"),
 
     CUSTOMER_NOT_FOUND ("1001", "Customer not found"),
     CUSTOMER_ALREADY_EXISTS ("1002", "Customer already exists"),

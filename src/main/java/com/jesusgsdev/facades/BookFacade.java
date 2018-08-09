@@ -12,7 +12,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static com.jesusgsdev.constants.ErrorCode.BOOK_ALREADY_EXISTS;
-import static com.jesusgsdev.constants.ErrorCode.BOOK_NOT_FOUND;
+import static com.jesusgsdev.constants.ErrorCode.PREGUNTA_NO_ENCONTRADA;
 
 @Service
 public class BookFacade {
@@ -41,8 +41,8 @@ public class BookFacade {
         }
 
         BookDTO bookDTO = new BookDTO();
-        bookDTO.setErrorMessage(BOOK_NOT_FOUND.getMessage());
-        bookDTO.setError(BOOK_NOT_FOUND.getCode());
+        bookDTO.setErrorMessage(PREGUNTA_NO_ENCONTRADA.getMessage());
+        bookDTO.setError(PREGUNTA_NO_ENCONTRADA.getCode());
         return bookDTO;
     }
 

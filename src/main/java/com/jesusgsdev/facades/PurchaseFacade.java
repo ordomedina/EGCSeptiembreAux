@@ -35,8 +35,8 @@ public class PurchaseFacade {
         PurchaseResponseDTO purchaseResponseDTO = new PurchaseResponseDTO();
         Optional<Book> bookOptional = bookService.findBookByISBN(purchaseRequestDTO.getBookISBN());
         if(!bookOptional.isPresent()) {
-            purchaseResponseDTO.setErrorMessage(BOOK_NOT_FOUND.getMessage());
-            purchaseResponseDTO.setError(BOOK_NOT_FOUND.getCode());
+            purchaseResponseDTO.setErrorMessage(PREGUNTA_NO_ENCONTRADA.getMessage());
+            purchaseResponseDTO.setError(PREGUNTA_NO_ENCONTRADA.getCode());
             return  purchaseResponseDTO;
         }
 
