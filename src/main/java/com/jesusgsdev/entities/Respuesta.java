@@ -1,10 +1,9 @@
 
 package com.jesusgsdev.entities;
 
-import javax.persistence.*;
-
 import org.hibernate.validator.constraints.NotBlank;
 
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -15,24 +14,24 @@ public class Respuesta extends BaseEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	private String	texto_respuesta;
+	private String	textoRespuesta;
 	private Boolean	seleccionada;
 
 	public Respuesta() { }
 
-	public Respuesta(String	texto_respuesta, Boolean	seleccionada) {
-		this.texto_respuesta = texto_respuesta;
+	public Respuesta(String	textoRespuesta, Boolean	seleccionada) {
+		this.textoRespuesta = textoRespuesta;
 		this.seleccionada = seleccionada;
 	}
 
 
 	@NotBlank
-	public String getTexto_respuesta() {
-		return this.texto_respuesta;
+	public String gettextoRespuesta() {
+		return this.textoRespuesta;
 	}
 
-	public void setTexto_respuesta(final String texto_respuesta) {
-		this.texto_respuesta = texto_respuesta;
+	public void settextoRespuesta(final String textoRespuesta) {
+		this.textoRespuesta = textoRespuesta;
 	}
 
 	public Boolean getSeleccionada() {
@@ -62,14 +61,14 @@ public class Respuesta extends BaseEntity {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Respuesta respuesta = (Respuesta) o;
-		return Objects.equals(texto_respuesta, respuesta.texto_respuesta) &&
+		return Objects.equals(textoRespuesta, respuesta.textoRespuesta) &&
 				Objects.equals(seleccionada, respuesta.seleccionada);
 	}
 
 	@Override
 	public int hashCode() {
 
-		return Objects.hash(texto_respuesta, seleccionada);
+		return Objects.hash(textoRespuesta, seleccionada);
 	}
 }
 
