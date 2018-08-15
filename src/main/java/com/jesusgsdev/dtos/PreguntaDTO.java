@@ -34,7 +34,7 @@ public class PreguntaDTO extends BaseDTO {
     }
 
     public static PreguntaDTO fromPregunta(Pregunta pregunta) {
-        return new PreguntaDTO(pregunta.getId(), pregunta.getTexto_pregunta(), pregunta.getTipo_pregunta());
+        return new PreguntaDTO(pregunta.getId(), pregunta.gettextoPregunta(), pregunta.gettipoPregunta());
     }
 
     public Long getId() {

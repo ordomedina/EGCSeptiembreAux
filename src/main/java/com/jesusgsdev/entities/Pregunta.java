@@ -1,11 +1,10 @@
 
 package com.jesusgsdev.entities;
 
-import java.util.Collection;
-import java.util.Objects;
-
 import javax.persistence.*;
 import javax.validation.Valid;
+import java.util.Collection;
+import java.util.Objects;
 
 @Entity
 @Table(name = "pregunta")
@@ -15,14 +14,14 @@ public class Pregunta extends BaseEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	private String	texto_pregunta;
-	private String	tipo_pregunta;
+	private String	textoPregunta;
+	private String	tipoPregunta;
 
 	public Pregunta() { }
 
-	public Pregunta(String	texto_pregunta, String	tipo_pregunta) {
-		this.texto_pregunta = texto_pregunta;
-		this.tipo_pregunta = tipo_pregunta;
+	public Pregunta(String	textoPregunta, String	tipoPregunta) {
+		this.textoPregunta = textoPregunta;
+		this.tipoPregunta = tipoPregunta;
 	}
 
 
@@ -34,20 +33,20 @@ public class Pregunta extends BaseEntity {
 		this.id = id;
 	}
 
-	public String getTexto_pregunta() {
-		return this.texto_pregunta;
+	public String gettextoPregunta() {
+		return this.textoPregunta;
 	}
 
-	public void setTexto_pregunta(final String texto_pregunta) {
-		this.texto_pregunta = texto_pregunta;
+	public void settextoPregunta(final String textoPregunta) {
+		this.textoPregunta = textoPregunta;
 	}
 
-	public String getTipo_pregunta() {
-		return this.tipo_pregunta;
+	public String gettipoPregunta() {
+		return this.tipoPregunta;
 	}
 
-	public void setTipo_pregunta(final String tipo_pregunta) {
-		this.tipo_pregunta = tipo_pregunta;
+	public void settipoPregunta(final String tipoPregunta) {
+		this.tipoPregunta = tipoPregunta;
 	}
 
 
@@ -92,14 +91,14 @@ public class Pregunta extends BaseEntity {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Pregunta pregunta = (Pregunta) o;
-		return Objects.equals(texto_pregunta, pregunta.texto_pregunta) &&
-				Objects.equals(tipo_pregunta, pregunta.tipo_pregunta);
+		return Objects.equals(textoPregunta, pregunta.textoPregunta) &&
+				Objects.equals(tipoPregunta, pregunta.tipoPregunta);
 	}
 
 	@Override
 	public int hashCode() {
 
-		return Objects.hash(texto_pregunta, tipo_pregunta);
+		return Objects.hash(textoPregunta, tipoPregunta);
 	}
 
 

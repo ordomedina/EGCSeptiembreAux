@@ -20,43 +20,43 @@ public class Votacion extends BaseEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	private Integer	id_censo;
-	private Integer	id_grupo;
+	private Integer	idCenso;
+	private Integer	idGrupo;
 	private String	titulo;
 	private String	descripcion;
-	private Date	fecha_ini;
-	private Date	fecha_fin;
+	private Date	fechaIni;
+	private Date	fechaFin;
 	private String	clave;
 
 	public Votacion() { }
 
-	public Votacion(Integer	 id_censo, Integer	id_grupo, String	titulo, String	descripcion, Date	fecha_ini, Date	fecha_fin,String	clave) {
-		this.id_censo = id_censo;
-		this.id_grupo = id_grupo;
+	public Votacion(Integer	 idCenso, Integer	idGrupo, String	titulo, String	descripcion, Date	fechaIni, Date	fechaFin,String	clave) {
+		this.idCenso = idCenso;
+		this.idGrupo = idGrupo;
 		this. titulo = titulo;
 		this.descripcion = descripcion;
-		this.fecha_ini = fecha_ini;
-		this.fecha_fin = fecha_fin;
+		this.fechaIni = fechaIni;
+		this.fechaFin = fechaFin;
 		this.clave = clave;
 
 
 	}
 
 
-	public Integer getId_censo() {
-		return this.id_censo;
+	public Integer getidCenso() {
+		return this.idCenso;
 	}
 
-	public void setId_censo(final Integer id_censo) {
-		this.id_censo = id_censo;
+	public void setidCenso(final Integer idCenso) {
+		this.idCenso = idCenso;
 	}
 
-	public Integer getId_grupo() {
-		return this.id_grupo;
+	public Integer getidGrupo() {
+		return this.idGrupo;
 	}
 
-	public void setId_grupo(final Integer id_grupo) {
-		this.id_grupo = id_grupo;
+	public void setidGrupo(final Integer idGrupo) {
+		this.idGrupo = idGrupo;
 	}
 
 	@NotBlank
@@ -80,23 +80,23 @@ public class Votacion extends BaseEntity {
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
-	public Date getFecha_ini() {
-		return this.fecha_ini;
+	public Date getfechaIni() {
+		return this.fechaIni;
 	}
 
-	public void setFecha_ini(final Date fecha_ini) {
-		this.fecha_ini = fecha_ini;
+	public void setfechaIni(final Date fechaIni) {
+		this.fechaIni = fechaIni;
 	}
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
-	public Date getFecha_fin() {
-		return this.fecha_fin;
+	public Date getfechaFin() {
+		return this.fechaFin;
 	}
 
-	public void setFecha_fin(final Date fecha_fin) {
-		this.fecha_fin = fecha_fin;
+	public void setfechaFin(final Date fechaFin) {
+		this.fechaFin = fechaFin;
 	}
 
 	@NotBlank
@@ -132,12 +132,12 @@ public class Votacion extends BaseEntity {
 		Votacion votacion = (Votacion) o;
 
 		return new EqualsBuilder()
-				.append(id_censo, votacion.id_censo)
-				.append(id_grupo, votacion.id_grupo)
+				.append(idCenso, votacion.idCenso)
+				.append(idGrupo, votacion.idGrupo)
 				.append(titulo, votacion.titulo)
 				.append(descripcion, votacion.descripcion)
-				.append(fecha_ini, votacion.fecha_ini)
-				.append(fecha_fin, votacion.fecha_fin)
+				.append(fechaIni, votacion.fechaIni)
+				.append(fechaFin, votacion.fechaFin)
 				.append(clave, votacion.clave)
 				.isEquals();
 	}
@@ -145,12 +145,12 @@ public class Votacion extends BaseEntity {
 	@Override
 	public int hashCode() {
 		return new HashCodeBuilder(17, 37)
-				.append(id_censo)
-				.append(id_grupo)
+				.append(idCenso)
+				.append(idGrupo)
 				.append(titulo)
 				.append(descripcion)
-				.append(fecha_ini)
-				.append(fecha_fin)
+				.append(fechaIni)
+				.append(fechaFin)
 				.append(clave)
 				.toHashCode();
 	}
