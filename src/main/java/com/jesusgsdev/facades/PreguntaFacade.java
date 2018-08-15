@@ -56,8 +56,8 @@ public class PreguntaFacade {
         }
 
         Pregunta pregunta = preguntaOptional.get();
-        pregunta.settextoPregunta(preguntaDTO.getTextoPregunta());
-        pregunta.settipoPregunta(preguntaDTO.getTipoPregunta());
+        pregunta.setTextoPregunta(preguntaDTO.getTextoPregunta());
+        pregunta.setTipoPregunta(preguntaDTO.getTipoPregunta());
 
         preguntaService.save(pregunta);
 

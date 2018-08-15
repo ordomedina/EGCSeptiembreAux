@@ -4,12 +4,11 @@ public enum ErrorCode {
 
     PREGUNTA_NO_ENCONTRADA("0001", "Pregunta no encontrada"),
 
-    CUSTOMER_NOT_FOUND ("1001", "Customer not found"),
-    CUSTOMER_ALREADY_EXISTS ("1002", "Customer already exists"),
+    VOTACION_NO_ENCONTRADA("1001", "Votacion no encontrada"),
 
-    PURCHASE_NOT_FOUND ("2001", "Purchase not found"),
+    RESPUESTA_NO_ENCONTRADA("1002", "Respuesta no encontrada")
 
-    PAYMENT_METHOD_NOT_VALID("7001", "Payment method not allowed");
+   ;
 
     private String code;
     private String message;

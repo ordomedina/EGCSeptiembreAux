@@ -6,12 +6,12 @@ import com.jesusgsdev.repositories.RespuestaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
+
+import java.util.List;
+import java.util.Optional;
 
 @Service
-
 public class RespuestaService {
-
 
 	private RespuestaRepository respuestaRepository;
 
@@ -20,37 +20,14 @@ public class RespuestaService {
 		this.respuestaRepository = respuestaRepository;
 	}
 
-	public Respuesta create() {
-		final Respuesta res = new Respuesta();
-		return res;
+	public List<Respuesta> findAll() { return  respuestaRepository.findAll(); }
+
+	public Optional<Respuesta> findRespuestaById(final Long id) {
+		return this.respuestaRepository.findRespuestaById(id);
 	}
 
-	public Collection<Respuesta> findAll() {
-		Collection<Respuesta> result;
-		result = this.respuestaRepository.findAll();
-		return result;
-	}
+	public Respuesta save(final Respuesta respuesta) { return this.respuestaRepository.save(respuesta); }
 
-	public Collection<Respuesta> listAll() {
-		Collection<Respuesta> result;
-		result = this.respuestaRepository.findAll();
-		return result;
-	}
-
-	public Respuesta findOne(final int id) {
-		Respuesta result;
-		result = this.respuestaRepository.findOne(id);
-		return result;
-	}
-
-	public Respuesta save(final Respuesta respuesta) {
-
-		return this.respuestaRepository.save(respuesta);
-	}
-
-	public void delete(final Respuesta respuesta) {
-
-		this.respuestaRepository.delete(respuesta);
-	}
+	public void delete(final Respuesta respuesta) { this.respuestaRepository.delete(respuesta); }
 
 }

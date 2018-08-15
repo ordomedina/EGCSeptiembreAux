@@ -33,19 +33,19 @@ public class Pregunta extends BaseEntity {
 		this.id = id;
 	}
 
-	public String gettextoPregunta() {
+	public String getTextoPregunta() {
 		return this.textoPregunta;
 	}
 
-	public void settextoPregunta(final String textoPregunta) {
+	public void setTextoPregunta(final String textoPregunta) {
 		this.textoPregunta = textoPregunta;
 	}
 
-	public String gettipoPregunta() {
+	public String getTipoPregunta() {
 		return this.tipoPregunta;
 	}
 
-	public void settipoPregunta(final String tipoPregunta) {
+	public void setTipoPregunta(final String tipoPregunta) {
 		this.tipoPregunta = tipoPregunta;
 	}
 

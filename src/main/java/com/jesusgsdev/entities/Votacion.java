@@ -42,20 +42,28 @@ public class Votacion extends BaseEntity {
 
 	}
 
+	public Long getId() {
+		return id;
+	}
 
-	public Integer getidCenso() {
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+	public Integer getIdCenso() {
 		return this.idCenso;
 	}
 
-	public void setidCenso(final Integer idCenso) {
+	public void setIdCenso(final Integer idCenso) {
 		this.idCenso = idCenso;
 	}
 
-	public Integer getidGrupo() {
+	public Integer getIdGrupo() {
 		return this.idGrupo;
 	}
 
-	public void setidGrupo(final Integer idGrupo) {
+	public void setIdGrupo(final Integer idGrupo) {
 		this.idGrupo = idGrupo;
 	}
 
@@ -80,22 +88,22 @@ public class Votacion extends BaseEntity {
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
-	public Date getfechaIni() {
+	public Date getFechaIni() {
 		return this.fechaIni;
 	}
 
-	public void setfechaIni(final Date fechaIni) {
+	public void setFechaIni(final Date fechaIni) {
 		this.fechaIni = fechaIni;
 	}
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
-	public Date getfechaFin() {
+	public Date getFechaFin() {
 		return this.fechaFin;
 	}
 
-	public void setfechaFin(final Date fechaFin) {
+	public void setFechaFin(final Date fechaFin) {
 		this.fechaFin = fechaFin;
 	}
 

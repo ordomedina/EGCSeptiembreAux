@@ -6,11 +6,11 @@ import com.jesusgsdev.repositories.VotacionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class VotacionService {
-
 
 	private VotacionRepository votacionRepository;
 
@@ -19,36 +19,14 @@ public class VotacionService {
 		this.votacionRepository = votacionRepository;
 	}
 
-	public Votacion create() {
-		final Votacion res = new Votacion();
-		return res;
+
+	public List<Votacion> findAll() { return votacionRepository.findAll(); }
+
+	public Optional<Votacion> findVotacionById(final Long id) {
+		return this.votacionRepository.findVotacionById(id);
 	}
 
-	public Collection<Votacion> findAll() {
-		Collection<Votacion> result;
-		result = this.votacionRepository.findAll();
-		return result;
-	}
+	public Votacion save(final Votacion votacion) { return this.votacionRepository.save(votacion); }
 
-	public Collection<Votacion> listAll() {
-		Collection<Votacion> result;
-		result = this.votacionRepository.findAll();
-		return result;
-	}
-
-	public Votacion findOne(final int id) {
-		Votacion result;
-		result = this.votacionRepository.findOne(id);
-		return result;
-	}
-
-	public Votacion save(final Votacion votacion) {
-
-		return this.votacionRepository.save(votacion);
-	}
-
-	public void delete(final Votacion votacion) {
-
-		this.votacionRepository.delete(votacion);
-	}
+	public void delete(final Votacion votacion) { this.votacionRepository.delete(votacion); }
 }

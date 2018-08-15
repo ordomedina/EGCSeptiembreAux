@@ -24,13 +24,20 @@ public class Respuesta extends BaseEntity {
 		this.seleccionada = seleccionada;
 	}
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	@NotBlank
-	public String gettextoRespuesta() {
+	public String getTextoRespuesta() {
 		return this.textoRespuesta;
 	}
 
-	public void settextoRespuesta(final String textoRespuesta) {
+	public void setTextoRespuesta(final String textoRespuesta) {
 		this.textoRespuesta = textoRespuesta;
 	}
 
