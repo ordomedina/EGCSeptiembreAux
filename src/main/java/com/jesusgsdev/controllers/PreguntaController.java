@@ -43,7 +43,7 @@ public class PreguntaController {
     }
 
     @GetMapping(params = "id")
-    public PreguntaDTO getPreguntaByISBN(@RequestParam("id") Long id) {
+    public PreguntaDTO getPreguntaById(@RequestParam("id") Long id) {
         return preguntaFacade.findPreguntaById(id);
     }
 
