@@ -1,7 +1,5 @@
 package com.jesusgsdev.services;
 
-import com.jesusgsdev.entities.Book;
-import com.jesusgsdev.repositories.BookRepository;
 import org.assertj.core.util.Lists;
 import org.hamcrest.collection.IsEmptyCollection;
 import org.junit.jupiter.api.BeforeEach;

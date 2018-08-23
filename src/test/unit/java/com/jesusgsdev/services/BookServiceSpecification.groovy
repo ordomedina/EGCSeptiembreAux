@@ -1,7 +1,6 @@
 package com.jesusgsdev.services
 
-import com.jesusgsdev.entities.Book
-import com.jesusgsdev.repositories.BookRepository
+
 import groovy.util.logging.Slf4j
 import spock.lang.Specification
 
