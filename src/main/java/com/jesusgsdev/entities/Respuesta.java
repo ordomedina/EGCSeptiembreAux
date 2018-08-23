@@ -18,6 +18,8 @@ public class Respuesta extends BaseEntity {
 
 	private Boolean	seleccionada;
 
+	@ManyToOne
+	@JoinColumn(name = "pregunta_id")
 	private Pregunta pregunta;
 
 	public Respuesta() { }

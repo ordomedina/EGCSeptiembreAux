@@ -3,6 +3,7 @@ package com.jesusgsdev.entities;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -17,11 +18,16 @@ public class Pregunta extends BaseEntity {
 
 	private String	tipoPregunta;
 
-	private Collection<Respuesta>	respuestas;
+	@OneToMany(mappedBy = "pregunta")
+	private List<Respuesta> respuestas;
 
-	private Votacion				votacion;
+	@ManyToOne
+	@JoinColumn(name = "votacion_id")
+	private Votacion votacion;
 
-	private Pregunta				dependencia;
+	@OneToOne
+	@JoinColumn(name = "pregunta_id")
+	private Pregunta dependencia;
 
 	public Pregunta() { }
 
@@ -67,11 +73,11 @@ public class Pregunta extends BaseEntity {
 
 //	@Valid
 	//@OneToMany(mappedBy = "pregunta")
-	public Collection<Respuesta> getRespuestas() {
+	public List<Respuesta> getRespuestas() {
 		return this.respuestas;
 	}
 
-	public void setRespuestas(final Collection<Respuesta> respuestas) {
+	public void setRespuestas(final List<Respuesta> respuestas) {
 		this.respuestas = respuestas;
 	}
 

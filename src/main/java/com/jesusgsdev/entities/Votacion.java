@@ -10,6 +10,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "votacion")
@@ -33,7 +34,8 @@ public class Votacion extends BaseEntity {
 
 	private String	clave;
 
-	private Collection<Pregunta> preguntas;
+	@OneToMany(mappedBy = "votacion")
+	private List<Pregunta> preguntas;
 
 	public Votacion() { }
 
@@ -127,11 +129,11 @@ public class Votacion extends BaseEntity {
 
 
 	//@OneToMany(mappedBy = "votacion")
-	public Collection<Pregunta> getPreguntas() {
+	public List<Pregunta> getPreguntas() {
 		return this.preguntas;
 	}
 
-	public void setPreguntas(final Collection<Pregunta> preguntas) {
+	public void setPreguntas(final List<Pregunta> preguntas) {
 		this.preguntas = preguntas;
 	}
 
