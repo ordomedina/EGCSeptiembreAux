@@ -2,7 +2,6 @@
 package com.jesusgsdev.entities;
 
 import javax.persistence.*;
-import javax.validation.Valid;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -15,7 +14,14 @@ public class Pregunta extends BaseEntity {
 	private Long id;
 
 	private String	textoPregunta;
+
 	private String	tipoPregunta;
+
+	private Collection<Respuesta>	respuestas;
+
+	private Votacion				votacion;
+
+	private Pregunta				dependencia;
 
 	public Pregunta() { }
 
@@ -49,15 +55,8 @@ public class Pregunta extends BaseEntity {
 		this.tipoPregunta = tipoPregunta;
 	}
 
-
-	// Relationships
-	private Collection<Respuesta>	respuestas;
-	private Votacion				votacion;
-	private Pregunta				dependencia;
-
-
-	@Valid
-	@OneToOne(optional = true, cascade = CascadeType.ALL)
+	//@Valid
+	//@OneToOne(optional = true, cascade = CascadeType.ALL)
 	public Pregunta getDependencia() {
 		return this.dependencia;
 	}
@@ -66,8 +65,8 @@ public class Pregunta extends BaseEntity {
 		this.dependencia = dependencia;
 	}
 
-	@Valid
-	@OneToMany(mappedBy = "pregunta")
+//	@Valid
+	//@OneToMany(mappedBy = "pregunta")
 	public Collection<Respuesta> getRespuestas() {
 		return this.respuestas;
 	}
@@ -76,8 +75,8 @@ public class Pregunta extends BaseEntity {
 		this.respuestas = respuestas;
 	}
 
-	@Valid
-	@ManyToOne
+	//@Valid
+//	@ManyToOne(optional=false)
 	public Votacion getVotacion() {
 		return this.votacion;
 	}

@@ -12,7 +12,6 @@ import java.util.Collection;
 import java.util.Date;
 
 @Entity
-@Access(AccessType.PROPERTY)
 @Table(name = "votacion")
 public class Votacion extends BaseEntity {
 
@@ -21,12 +20,20 @@ public class Votacion extends BaseEntity {
 	private Long id;
 
 	private Integer	idCenso;
+
 	private Integer	idGrupo;
+
 	private String	titulo;
+
 	private String	descripcion;
+
 	private Date	fechaIni;
+
 	private Date	fechaFin;
+
 	private String	clave;
+
+	private Collection<Pregunta> preguntas;
 
 	public Votacion() { }
 
@@ -117,12 +124,9 @@ public class Votacion extends BaseEntity {
 	}
 
 
-	// Relationships
-
-	private Collection<Pregunta> preguntas;
 
 
-	@OneToMany(mappedBy = "votacion")
+	//@OneToMany(mappedBy = "votacion")
 	public Collection<Pregunta> getPreguntas() {
 		return this.preguntas;
 	}

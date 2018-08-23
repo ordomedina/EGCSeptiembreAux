@@ -15,7 +15,10 @@ public class Respuesta extends BaseEntity {
 	private Long id;
 
 	private String	textoRespuesta;
+
 	private Boolean	seleccionada;
+
+	private Pregunta pregunta;
 
 	public Respuesta() { }
 
@@ -50,11 +53,7 @@ public class Respuesta extends BaseEntity {
 	}
 
 
-	// Relationships
-	private Pregunta pregunta;
-
-
-	@ManyToOne
+	//@ManyToOne(optional=false)
 	public Pregunta getPregunta() {
 		return this.pregunta;
 	}
