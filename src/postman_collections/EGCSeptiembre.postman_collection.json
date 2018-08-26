@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "08072d15-6177-435b-ad4f-f95e8ebb2b86",
+		"name": "EGCSeptiembre",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pregunta",
+			"item": [
+				{
+					"name": "Crear Pregunta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " \r\n     {\r\n     \r\n   \r\n     \"textoPregunta\": \"¿Prefieres consola o pc?\",\r\n     \"tipoPregunta\": \"Abiera\"\r\n     \r\n   }\r\n "
+						},
+						"url": {
+							"raw": "localhost:8080/preguntas/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"preguntas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Pregunta ",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"texto_pregunta\": \"¿Cuantos años tienes?\",\n   \"tipo_pregunta\": \"Politica\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/preguntas/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"preguntas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Pregunta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8080/preguntas/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"preguntas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Pregunta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8080/preguntas/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"preguntas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Respuesta",
+			"item": [
+				{
+					"name": "Obtener Respuesta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8080/respuestas/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"respuestas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Respuesta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"texto_respuesta\": \"25\",\n \n   \"seleccionada\": \"true\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/respuestas/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"respuestas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Respuesta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"texto_respuesta\": \"25\",\n \n   \"seleccionada\": \"true\"\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/respuestas/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"respuestas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Respuesta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8080/respuestas/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"respuestas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Votacion",
+			"item": [
+				{
+					"name": "Obtener Votacion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8080/votaciones/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"votaciones",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Votacion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id_censo\": \"1\",\n \n   \"id_grupo\": \"1\",\n   \"titulo\": \"titulo\",\n \n   \"descripcion\": \"descripcion\",\n \n   \"fecha_ini\": \"10/10/2017 10:20\",\n \n   \"fecha_fin\": \"1/01/2018 10:20\",\n \n   \"clave\": \"clave\"\n\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/votaciones/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"votaciones",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Votacion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8080/votaciones/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"votaciones",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Votacion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:8080/votaciones/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"votaciones",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
