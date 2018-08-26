@@ -8,7 +8,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
@@ -128,7 +127,7 @@ public class Votacion extends BaseEntity {
 
 
 
-	//@OneToMany(mappedBy = "votacion")
+
 	public List<Pregunta> getPreguntas() {
 		return this.preguntas;
 	}

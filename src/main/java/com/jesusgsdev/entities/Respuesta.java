@@ -55,7 +55,7 @@ public class Respuesta extends BaseEntity {
 	}
 
 
-	//@ManyToOne(optional=false)
+
 	public Pregunta getPregunta() {
 		return this.pregunta;
 	}

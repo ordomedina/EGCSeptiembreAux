@@ -2,7 +2,6 @@
 package com.jesusgsdev.entities;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 
@@ -61,8 +60,7 @@ public class Pregunta extends BaseEntity {
 		this.tipoPregunta = tipoPregunta;
 	}
 
-	//@Valid
-	//@OneToOne(optional = true, cascade = CascadeType.ALL)
+
 	public Pregunta getDependencia() {
 		return this.dependencia;
 	}
@@ -71,8 +69,7 @@ public class Pregunta extends BaseEntity {
 		this.dependencia = dependencia;
 	}
 
-//	@Valid
-	//@OneToMany(mappedBy = "pregunta")
+
 	public List<Respuesta> getRespuestas() {
 		return this.respuestas;
 	}
@@ -81,8 +78,7 @@ public class Pregunta extends BaseEntity {
 		this.respuestas = respuestas;
 	}
 
-	//@Valid
-//	@ManyToOne(optional=false)
+
 	public Votacion getVotacion() {
 		return this.votacion;
 	}
